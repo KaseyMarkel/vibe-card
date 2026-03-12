@@ -111,8 +111,8 @@ function SliderTrack({ aiValue, humanValue, dimId, onHumanChange, showBoth }) {
       }} />
       <div style={{
         position: "absolute", top: 10, left: 0,
-        width: `${humanValue}%`, height: 8,
-        borderRadius: humanValue >= 99 ? 4 : "4px 0 0 4px",
+        width: `${100 - humanValue}%`, height: 8,
+        borderRadius: humanValue <= 1 ? 4 : "4px 0 0 4px",
         background: `linear-gradient(90deg, ${C.human}, ${C.humanBright})`,
         opacity: 0.65,
         transition: isDragging.current ? "none" : "width 0.15s ease",
